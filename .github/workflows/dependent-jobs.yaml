@@ -6,7 +6,7 @@ jobs:
   job_on_ubuntu:
     runs-on: ubuntu-latest
     steps:
-    - run: data
+    - run: date
   job_on_windows:
     name: A Windows Job
     runs-on: windows-latest
