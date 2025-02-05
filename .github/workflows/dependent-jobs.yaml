@@ -11,12 +11,19 @@ jobs:
     name: A Windows Job
     runs-on: windows-latest
     steps:
+    #On third level indentation, add dashes
     - name: First step in windows job
       run: date
   job_on_macos:
     needs: [job_on_ubuntu, job_on_windows]
     runs-on: macos-latest
     name: A job that runs on Mac OS
+    steps:
+    - run: pwd
+    - name: new step
+      run: ls
+    - name: third step
+      run: ls -la
   Final_job:
     needs: job_on_macos
     runs-on: ubuntu-latest
