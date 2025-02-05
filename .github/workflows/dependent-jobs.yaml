@@ -15,11 +15,11 @@ jobs:
         run: date
   job_on_macos:
     needs: [job_on_ubuntu, job_on_windows]
-    name: A job that runs on Mac OS
     runs-on: macos-latest
+    name: A job that runs on Mac OS
   Final_job:
     needs: job_on_macos
-    name: A final job
     runs-on: ubuntu-latest
+    name: A final job
     steps:
       - run: echo Hello World!
